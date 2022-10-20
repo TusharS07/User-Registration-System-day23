@@ -9,15 +9,15 @@ public class UserRegisteration {
         UserRegisterationOprations operations = new UserRegisterationOprations();
         try {
             // 1: Validate First Name
-            operations.validFirstName("Tushar");
+            operations.userValidateFirstName.validate("Tushar");
             // 2: Validate Last Name
-            operations.validLastName("Salunkhe");
+            operations.userValidateLastName.validate("Salunkhe");
             // 3: Validate Email_Id
-            operations.validEmail_Id("abc.xyz@bl.co.in");
+            operations.userValidateEmail_ID.validate("abc.xyz@bl.co.in");
             // 4: Validate Mobile Number
-            operations.validMobileFormat("91 8828294897");
+            operations.userValidateMobileNo.validate("91 8828294897");
             // 5: Validate Password.
-            operations.validPassword("Atushar@12");
+            operations.userValidatePassword.validate("Atushar@12");
         } catch (Exception e) {
             System.out.println("Invalid Input");
         }

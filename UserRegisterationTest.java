@@ -16,7 +16,7 @@ public class UserRegisterationTest {
     @Test
     public void checkFirstNameValid() {
         try {
-            Assert.assertTrue(userRegisterationOprations.validFirstName("Tushar"));
+            Assert.assertTrue(userRegisterationOprations.userValidateFirstName.validate("Tushar"));
         } catch (InvalidUserException e) {
             System.out.println("Exception Occurs\n" + e);
         }
@@ -26,7 +26,7 @@ public class UserRegisterationTest {
     @Test
     public void checkLastNameValid() {
         try {
-            Assert.assertTrue(userRegisterationOprations.validLastName("Salunkhe"));
+            Assert.assertTrue(userRegisterationOprations.userValidateLastName.validate("Salunkhe"));
         } catch (InvalidUserException e) {
             System.out.println("Exception Occurs\n" + e);
         }
@@ -36,7 +36,7 @@ public class UserRegisterationTest {
     @Test
     public void checkEmail_IdValid() {
         try {
-            Assert.assertTrue(userRegisterationOprations.validEmail_Id("abc.xyz@bl.co.in"));
+            Assert.assertTrue(userRegisterationOprations.userValidateEmail_ID.validate("abc.xyz@bl.co.in"));
         } catch (InvalidUserException e) {
             System.out.println("Exception Occurs\n" + e);
         }
@@ -46,7 +46,7 @@ public class UserRegisterationTest {
     @Test
     public void checkMobile_NumberValid() {
         try {
-            Assert.assertTrue(userRegisterationOprations.validMobileFormat("91 9919819801"));
+            Assert.assertTrue(userRegisterationOprations.userValidateMobileNo.validate("91 9919819801"));
         } catch (InvalidUserException e) {
             System.out.println("Exception Occurs\n" + e);
         }
@@ -56,7 +56,7 @@ public class UserRegisterationTest {
     @Test
     public void checkPasswordValid() {
         try {
-            Assert.assertTrue(userRegisterationOprations.validPassword("Tushar@12"));
+            Assert.assertTrue(userRegisterationOprations.userValidatePassword.validate("Tushar@12"));
         } catch (InvalidUserException e) {
             System.out.println("Exception Occurs\n" + e);
         }
@@ -68,7 +68,7 @@ public class UserRegisterationTest {
     @Test
     public void checkFirstNameInvalid() {
         try {
-            Assert.assertFalse(userRegisterationOprations.validFirstName("tushar"));
+            Assert.assertFalse(userRegisterationOprations.userValidateFirstName.validate("tushar"));
         } catch (InvalidUserException e) {
             System.out.println("Exception Occurs\n" + e);
         }
@@ -77,7 +77,7 @@ public class UserRegisterationTest {
     @Test
     public void checkLastNameInvalid() {
         try {
-            Assert.assertFalse(userRegisterationOprations.validLastName("salunkhe"));
+            Assert.assertFalse(userRegisterationOprations.userValidateLastName.validate("salunkhe"));
         } catch (InvalidUserException e) {
             System.out.println("Exception Occurs\n" + e);
         }
@@ -87,7 +87,7 @@ public class UserRegisterationTest {
     @Test
     public void checkEmail_IdInvalid() {
         try {
-            Assert.assertFalse(userRegisterationOprations.validEmail_Id(".abc.xyz@bl.co.in"));
+            Assert.assertFalse(userRegisterationOprations.userValidateEmail_ID.validate(".abc.xyz@bl.co.in"));
         } catch (InvalidUserException e) {
             System.out.println("Exception Occurs\n" + e);
         }
@@ -97,7 +97,7 @@ public class UserRegisterationTest {
     @Test
     public void checkMobile_NumberInvalid() {
         try {
-            Assert.assertFalse(userRegisterationOprations.validMobileFormat("91 928282"));
+            Assert.assertFalse(userRegisterationOprations.userValidateMobileNo.validate("91 928282"));
         } catch (InvalidUserException e) {
             System.out.println("Exception Occurs\n" + e);
         }
@@ -107,7 +107,7 @@ public class UserRegisterationTest {
     @Test
     public void checkPasswordInvalid() {
         try {
-            Assert.assertFalse(userRegisterationOprations.validPassword("tushar@12"));
+            Assert.assertFalse(userRegisterationOprations.userValidatePassword.validate("tushar@12"));
         } catch (InvalidUserException e) {
             System.out.println("Exception Occurs\n" + e);
         }
